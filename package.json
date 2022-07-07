@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint '**/*.js' --fix --ignore-pattern node_modules/",
-    "format": "prettier --write '**/*.js'"
+    "test:watch": "jest --watchAll",
+    "lint": "eslint \"**/*.js\" --fix --ignore-pattern node_modules/",
+    "format": "prettier --write \"**/*.js\""
   },
   "author": "",
   "license": "ISC",
@@ -21,7 +21,13 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28.1.2",
     "pino-pretty": "^8.1.0",
-    "prettier": "^2.7.1"
-  }
+    "prettier": "^2.7.1",
+    "tap": "^16.3.0"
+  },
+  "eslintIgnore": [
+    "*.test.js",
+    "*.spec.js"
+  ]
 }
